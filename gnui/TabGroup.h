@@ -46,11 +46,12 @@ class GNUI_API TabGroupPager {
 public:
 
     TabGroupPager() : shift_(0), border_(10), slope_(5), extra_space_(5),_noclip(false) {}
-    
+    virtual ~TabGroupPager() {}
+
     /* Pager template methods definition */
 
     /*! this method must update the tab positions and width array, returns the selected tab    */
-    virtual int update_positions(TabGroup* g, int numchildren, int& selected, 
+    virtual int update_positions(TabGroup* g, int numchildren, int& selected,
 	int& cumulated_width, int& available_width , int* tab_pos, int* tab_width) { return selected;}
     /*! draw the tabs for this custom pager, return false means no custom draw is made */
     virtual bool draw_tabs(TabGroup* g, int selected, int* tab_pos, int* tab_width) { return false;}
@@ -72,8 +73,8 @@ public:
     void border(int v)	{border_=v;}
     void slope(int v)	{slope_=v;}
     void extra_space(int v) {extra_space_=v;}
-    
-    /*! shifting to nth+1 tab to draw, permit to 'keep' a position while 
+
+    /*! shifting to nth+1 tab to draw, permit to 'keep' a position while
 	changing tabs and tab is in the interval
     */
     int  shift()	const {return shift_;}
@@ -81,15 +82,15 @@ public:
     int spacing()	const {return slope_+extra_space_;}
     /*! determines if we forbid partial tabs drawing with clipping */
     void noclip(bool v) {_noclip=v;}
-  
+
 private:
     int shift_, border_, slope_, extra_space_;
-    bool _noclip; 
-  
+    bool _noclip;
+
 };
 
 // gnui default factory pagers
-const int PAGER_MENU   = 0; //<-- two left and right buttons  provide prev page  and next page 
+const int PAGER_MENU   = 0; //<-- two left and right buttons  provide prev page  and next page
 const int PAGER_SHRINK = 1; //<-- tabs outside rect are shrinked to very small slice to fit
 
 
@@ -108,7 +109,7 @@ public:
   Widget *selected_child();
   bool selected_child(Widget *);
   void set_draw_outline( bool draw_outline );
-  
+
   //! setting the pager_ to a tabgroup, pager is _never_ null by design
   void pager(TabGroupPager * value);
   //! returning the current pager_ responsible of this instance

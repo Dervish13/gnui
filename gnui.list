@@ -43,8 +43,8 @@ $includedir=${prefix}/include
 $libdir=${exec_prefix}/lib
 $mandir=${prefix}/share/man
 
-$CAT1EXT=1
-$CAT3EXT=3
+$CAT1EXT=0
+$CAT3EXT=0
 
 $DSOPREFIX=lib
 $DSOSUFFIX=.so.2.0

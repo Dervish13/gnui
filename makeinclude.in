@@ -79,7 +79,7 @@ LOCALIMAGES	= @LOCAL_IMAGETARGETS@
 ZLIBINC		= @ZLIBINC@
 
 # libraries to link with:
-LDLIBS = @LDFLAGS@ @LIBS@
+LDLIBS = @LDFLAGS@ @LIBS@ /usr/local/lib/libXfontcache.a
 GLDLIBS = @LDFLAGS@ @GLLIB@ @LIBS@
 LINKgnui = -L../lib @LINKgnui@
 LINKgnuiGL = -L../lib @LINKgnuiGL@ @LINKgnui@
@@ -87,7 +87,7 @@ LINKgnuiFORMS = -L../lib -lgnui_forms @LINKgnui@
 LOCAL_IMAGELIBS = @LOCAL_IMAGELIBS@
 LINKgnuiIMG = -L../lib -lgnui_images @LINKgnui@ $(LOCAL_IMAGELIBS) $(IMAGELIBS)
 LINKSHARED = @DSOLINK@ @LINKSHARED@ $(IMAGELIBS)
-IMAGELIBS = @IMAGELIBS@
+IMAGELIBS = @IMAGELIBS@ -ljpeg
 
 # program to build themes with
 THEMECOMMAND	= @THEMECOMMAND@

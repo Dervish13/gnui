@@ -876,7 +876,7 @@ if test -n "$GCC"; then
     esac
 
     if test x$uname != xDarwin; then
-        CXX="$CC"
+        CXX="c++"
     fi
 
     AC_ARG_ENABLE(exceptions, [  --enable-exceptions     turn on GCC exceptions (default=yes)])

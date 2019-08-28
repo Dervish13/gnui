@@ -27,8 +27,8 @@
 
 include makeinclude
 
-# DIRS = src $(LOCALIMAGES) images OpenGL fluid glut test
-DIRS = src $(LOCALIMAGES) images OpenGL
+# DIRS = src $(LOCALIMAGES) images OpenGL gnuid glut test
+DIRS = src $(LOCALIMAGES) images OpenGL gnuid
 
 all: makeinclude
 	for dir in $(DIRS); do\
@@ -96,12 +96,12 @@ native-dist:
 
 etags:
 	etags gnui/*.h src/*.cxx src/win32/*.cxx src/osx/*.cxx src/*.c \
-	images/*.cxx fluid/*.cxx fluid/*.h test/*.cxx test/*.h Makefile */Makefile
+	images/*.cxx gnuid/*.cxx gnuid/*.h test/*.cxx test/*.h Makefile */Makefile
 dos2unix:
 	dos2unix gnui/*.h src/*.cxx src/win32/*.cxx src/*.c images/*.cxx \
-		fluid/*.cxx fluid/*.h fluid/*.fl test/*.cxx test/*.h gnui/compat/FL/*.H README*
+		gnuid/*.cxx gnuid/*.h gnuid/*.fl test/*.cxx test/*.h gnui/compat/FL/*.H README*
 	chmod -x gnui/*.h src/*.cxx src/win32/*.cxx src/*.c images/*.cxx \
-		fluid/*.cxx fluid/*.h fluid/*.fl test/*.cxx test/*.h
+		gnuid/*.cxx gnuid/*.h gnuid/*.fl test/*.cxx test/*.h
 #
 # End of "$Id$".
 #
