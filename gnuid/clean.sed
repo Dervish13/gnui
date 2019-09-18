@@ -1,2 +1,0 @@
-s/FLUID_IMPORT FLUID_IMPORT/GNUI_IMPORT/
-s/write_FLUID_IMPORT static/write_static/
