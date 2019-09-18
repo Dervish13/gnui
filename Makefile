@@ -64,7 +64,7 @@ clean:
 
 distclean: clean
 	$(RM) config.*
-	$(RM) gnui-config gnui.list makeinclude
+	$(RM) makeinclude
 	$(RM) FL/Makefile
 	$(RM) documentation/*.$(CAT1EXT)
 	$(RM) documentation/*.$(CAT3EXT)

@@ -949,9 +949,6 @@ if test -n "$GCC"; then
     # This option is required on some versions of Solaris to work around
     # bugs in the X headers up through Solaris 7.
     #
-    # Unlike the other compiler/optimization settings, this one is placed
-    # in CFLAGS and CXXFLAGS so that gnui-config will provide the option
-    # to clients - otherwise client apps will not compile properly...
     if test "$uname" = SunOS; then
 	AC_MSG_CHECKING(if GCC supports -fpermissive)
 
@@ -1078,10 +1075,7 @@ fi
 dnl Write all of the files...
 AC_CONFIG_HEADER(config.h:configh.in)
 dnl AC_CONFIG_HEADER(gnui/string.h)
-AC_OUTPUT(makeinclude gnui.list gnui-config)
-
-dnl Make sure the gnui-config script is executable...
-chmod +x gnui-config
+AC_OUTPUT(makeinclude)
 
 echo
 echo Libs:              $LIBS

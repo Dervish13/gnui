@@ -75,7 +75,6 @@ DSOSYMLINK	= @DSOSYMLINK@
 DSOTARGET	= @DSOTARGET@
 
 # local image targets
-LOCALIMAGES	= @LOCAL_IMAGETARGETS@
 ZLIBINC		= @ZLIBINC@
 
 # libraries to link with:
